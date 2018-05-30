@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   get '/hello' => 'welcome#hello'
 
-  get '/songs' => 'songs#list', as: :songs_list
+  get '/songs' => 'songs#index', as: :songs_list
+  
+  get '/songs/:id' => 'songs#show', as: :song
 end

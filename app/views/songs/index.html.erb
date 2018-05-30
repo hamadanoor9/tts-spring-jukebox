@@ -8,8 +8,8 @@
 
   <% @songs.each do |song| %>
     <tr>
-      <td><%= song[0] %></td>
-      <td><%= duration_as_minutes_and_seconds(song[1]) %></td>
+      <td><%= link_to song.name, song_path(id: song.id) %></td>
+      <td><%= duration_as_minutes_and_seconds(song.duration) %></td>
     </tr>
   <% end %>
 
