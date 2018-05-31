@@ -4,13 +4,19 @@
   <tr>
     <th>Name</th>
     <th>Duration</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 
   <% @songs.each do |song| %>
     <tr>
       <td><%= link_to song.name, song_path(id: song.id) %></td>
       <td><%= duration_as_minutes_and_seconds(song.duration) %></td>
+      <td><%= link_to "X", edit_song_path(id: song.id) %></td>
+      <td><%= link_to "X", song_path(id: song.id), method: 'delete' %></td>
     </tr>
   <% end %>
 
 </table>
+
+<%= link_to "Create a Song", new_song_path %>

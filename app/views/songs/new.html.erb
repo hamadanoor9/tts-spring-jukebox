@@ -1,0 +1,7 @@
+<%= form_for @song do |form| %>
+    
+    <%= render 'form', form: form, song: @song %>
+    
+    <%= form.submit 'Create Song' %>
+
+<% end %>
