@@ -1,0 +1,14 @@
+<h1>Edit an Artist</h1>
+
+
+<%= form_for @artist do |form| %>
+
+    <%= render "shared/error_messages" , model: @artist %>
+    
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    
+    <br>
+    <br>
+    <%= form.submit "Edit" %>
+<% end %>

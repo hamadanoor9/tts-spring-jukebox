@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/hello' => 'welcome#hello'
 
   resources :songs
+  resources :artists
 end
